@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <form action="pagina.php" method="get">
+        <p>
+            Nom
+            <input type="text" name="nom" id="nom">
+
+        </p>
+
+        <p>
+            Cognom
+
+            <!-- required se usa para que el campo sea obligatorio -->
+            <input type="text" name="cognom" id="cognom" required>
+
+        </p>
+
+
+        <p>
+            Password
+            <input type="password" name="pass" id="pass">
+
+        </p>
+
+
+        <p>
+           <input type="submit" name="click" id="click" value="CLICK">
+           <input type="reset" name="click" id="click" value="RESET">
+ 
+        </p>
+
+      
+        <p>
+            Preu
+            <input type="hidden" name="preu" id="preu" value="500">
+
+        </p>
+
+     
+        <p>
+            Button
+            <input type="button" name="button" id="button" value="Para JScript">
+
+        </p>
+        
+        <p>
+            Edat
+
+            <!-- step="any" nos permite usar decimales en el input 
+                si se utiliza un número en vez de any indica 
+                cuántos saltos se toman al pulsar las flechas
+                de aumento y que el valor tenga que ser un número cada
+                X saltos
+
+            min para establecer un mínimo, max para un máximo
+            -->
+            <input type="number" step="3" name="edat" id="edat" min="10" max="40">
+
+        </p>
+
+
+        <p>
+            Search
+            <input type="search" name="search" id="search">
+
+        </p>
+        
+        <p>
+            Telefon
+            <input type="telf" name="telf" id="telf">
+
+        </p>
+
+        <p>
+            Web
+            <br>
+            *con placeholder*
+            <input type="url" name="url" id="url" placeholder="http://webdeprueba.com">
+
+        </p>
+
+
+        <p>
+            E-mail
+            <input type="email" name="email" id="email">
+
+        </p>
+
+
+        <p>
+            Fecha
+            <input type="date" name="date" id="date" min="" >
+
+        </p>
+
+
+
+        <p>
+            Mes de naixement
+            <input type="month" name="mes" id="mes" >
+
+        </p>
+
+        <p>
+            Mes de naixement
+            <input type="month" name="mes" id="mes" >
+
+        </p>
+
+        <p>
+            Semana de naixement
+            <input type="week" name="semana" id="semana" >
+
+        </p>
+
+        <p>
+            Hora
+            <input type="time" name="time" id="time" >
+
+        </p>
+
+
+
+
+
+
+
+
+    </form>
+    
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

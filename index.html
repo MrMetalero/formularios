@@ -144,9 +144,179 @@
 
 
 
+<form action="recibo.php">
+    <!-- checked es para que aparezca seleccionado por defecto -->
+    <p>
+        <input type="checkbox" name="casilla" value="si" checked>
+        Suscríbete al newsletter
+        <br>
+        <input type="submit" name="enviar">
+    </p>
+
+    <p>¿Qué vehículo tienes?
+        moto <input type="checkbox" name="moto" value="moto">
+        bici <input type="checkbox" name="bici" value="bici">
+        transporte público <input type="checkbox" name="trpublico" value="trpublico">
+        coche propio <input type="checkbox" name="coche" value="coche">
+
+    </p>
+
+    <p>
+        <!-- Solo te deja escoger uno porque tienen el mismo name
+         Por tanto si los quiero usar para esto, tendré que darles el 
+            mismo siempre -->
+        color favorito
+        <br>
+        rojo <input type="radio" name="color" value="rojo">
+        verde <input type="radio" name="color" value="verde">
+        azul <input type="radio" name="color" value="azul">
+
+        <input type="submit" name="enviarcolor" value="Enviar color">
+ 
+        <input type="color" name="colorsend">
+        <!-- Step se usa para la cantidad que se aumenta al arrastrar -->
+            <input type="range" id="rango" name="stresslevel" min="0" max="10" step="1">
+  
+  
+    </p>
+    <p>Nota:
+        <span id="nota"></span>
+
+    </p>
+
+    <script>
+        // script para que nos muestre el rango cuando lo vamos 
+        // moviendo
+
+        var slider = document.getElementById ("rango");
+        var output = document.getElementById ("nota")
+        output.innerHTML = slider.value;
+        
+        slider.oninput = function () {
+        output.innerHTML =this.value;
+
+        }
+    
+    </script>
+
+    <p>
+        <!-- Para elegir archivos desde el PC -->
+        favorito    <input type="file" name="foto">
+
+    </p>
+
+    <p>
+        Observaciones
+        <textarea name="observaciones" id="observaciones" cols="30" rows="10"></textarea>
+
+
+    </p>
+
+    <p>
+        <!-- para que por defecto no me seleccione una opción, puedo crear
+        Una en concreto que tenga de valor 0 y que se envíe esa. 
+        Se puede utiizar "size" para limitar cuantas opciones se 
+        muestran a la vez.
+    
+        Se puede utilizar multiple para permitir seleccionar varias
+        -->
+
+       <Select name="menu" id="menu" multiple>
+        <option value="1">uno</option>
+        <option value="2">dos</option>
+        <option value="3">tres</option>
+        <option value="4">cuatro</option>
+
+       </Select>
+
+
+
+    </p>
+
+    <p>
+        <!-- Con estas opciones puedo establecer un grupo con
+        Diferentes opciones a elegir dentro de cada grupo -->
+
+
+        <select name="curso" id="curso">
+            <optgroup label="ASIR"></optgroup>
+            <option value="1asir">Primero</option>
+            <option value="2asir">Segundo</option>
+        
+            <optgroup label="DAM"></optgroup>
+            <option value="1dam">Primero</option>
+            <option value="2dam">Segundo</option>
+        
+        </select>
+
+    </p>
+
+    <p>
+        <fieldset>
+            <legend>Datos personales</legend>
+            <p>
+                nombre
+                <input type="text" name="nombre_alumno" id="">
+            </p>
+
+            <p>
+                edad
+                <input type="text" name="edad_alumno" id="">
+            </p>
+
+        </fieldset>
+
+    <p>
+        <!-- Forma implícita de hacer el texto seleccionable además
+        de la casilla -->
+
+        <label>
+            <input type="checkbox" name="casilla">
+            
+            Casilla
+
+        </label>
+
+    </p>        
+
+    <p>
+
+        <!-- Forma explícita de hacer el texto seleccionable además
+        de la casilla  en el for se pone el ID de la checkbox u
+        elemento que queremos usar. -->
+
+        <input type="checkbox" name="casilla2" id="casilla2"> 
+        <label for="casilla2">Casilla</label>
+
+
+    </p>
+
+
+
+
+
+    </p>
+
+
+
+
+
+
+
+    <input type="reset" name="clear" value="Clear">
+</form>
+
+
+
+
+
+
+
 
 
 </body>
+
+
 </html>
 
 
